@@ -6,7 +6,7 @@ Learn more about Flink at http://flink.apache.org/
 ## Ecosystem Components
 In the following section we will look at different components which makes part of the Apache Flink ecosystem. 
 
-![Flink Ecosystem](https://raw.githubusercontent.com/achmand/ics5114_assignment/master/tutorials/images/flink_ecosystem.png)
+![Flink Ecosystem](https://raw.githubusercontent.com/achmand/flink-java-tutorials/master/images/flink_ecosystem.png)
 
 The above image and the following explanation is taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
 
@@ -107,7 +107,7 @@ To build unit tests with Java 8, use Java 8u51 or above to prevent failures in u
 ## Learning Apache Flink with Java
 We suggest to follow the tutorials in order, since some steps required in one tutorial may be found in a previous tutorial. 
 
-* [Tutorial #1: Word Count](). 
+* [Tutorial #1: Word Count](https://github.com/achmand/flink-java-tutorials/tree/master/1_word_count). 
 
 ## Further Reading and Other Resources 
 The following suggestions were taken from the following sources;
