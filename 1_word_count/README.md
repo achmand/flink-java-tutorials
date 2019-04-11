@@ -1,5 +1,5 @@
 # Word Count in Apache Flink (batch processing) using Java 
-In this tutorial we will implement a word counting program on Apache Flink using Java. Make sure that any prerequisites are installed on your machine. For this tutorial [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) was used to write Java code. We recommend using  [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) or [Eclipse](https://www.eclipse.org/downloads/packages/installer) as an IDE. In this tutorial it is assumed that you have some knowledge in Java or any other [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) language. 
+In this tutorial we will implement a word counting program (batch processing) on Apache Flink using Java. Make sure that any prerequisites are installed on your machine. For this tutorial [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) was used to write Java code. We recommend using  [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) or [Eclipse](https://www.eclipse.org/downloads/packages/installer) as an IDE. In this tutorial it is assumed that you have some knowledge in Java or any other [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) language. 
 
 ### Step 1: Setting up a new Maven project. 
 In your IDE create a new Maven Project. Once the project is created, create a new package in `src/main/java` and name it `tutorial`. Inside the newly created package, create a new class and name it `WordCount`. 
@@ -33,7 +33,7 @@ Open the `pom.xml` and include the following dependencies.
 ```
 Once you added these dependencies, clean Maven project and install. The image below shows how to clean and install a Maven project when using IntelliJ, if you are using Eclipse just right click on the `pom.xml` go to 'Run As' and click on 'Maven clean' and then 'Maven install'. This will download and install the dependencies which were included.
 
-![IntelliJ Maven](https://raw.githubusercontent.com/achmand/flink-java-tutorials/master/images/flink_ecosystem.png)
+![IntelliJ Maven](https://github.com/achmand/flink-java-tutorials/blob/master/images/tutorial_1/intellij_maven.png?raw=true)
 
 *NOTE: You can Enable Auto-Import, to automatically download and install any dependencies included in the `pom.xml` file.*
 
