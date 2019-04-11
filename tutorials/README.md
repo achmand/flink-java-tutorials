@@ -4,7 +4,7 @@ In the following tutorials we will be looking on how to use Apache Flink with py
 Learn more about Flink at http://flink.apache.org/
 
 ## Ecosystem Components
-In the following section we will look at different components which makes part of the Apache Flink ecosystem. 
+In the following section we will look at different components which make up the Apache Flink ecosystem. 
 
 ![Flink Ecosystem](https://raw.githubusercontent.com/achmand/ics5114_assignment/master/tutorials/images/flink_ecosystem.png)
 
