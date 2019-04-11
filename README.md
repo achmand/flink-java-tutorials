@@ -106,7 +106,7 @@ To build unit tests with Java 8, use Java 8u51 or above to prevent failures in u
 ## Learning Apache Flink with Java
 We suggest to follow the tutorials in order, since some steps required in one tutorial may be found in a previous tutorial. 
 
-* [Tutorial #1: Word Count](https://github.com/achmand/flink-java-tutorials/tree/master/1_word_count). 
+* [Tutorial #1: Word Count (Batch Processing)](https://github.com/achmand/flink-java-tutorials/tree/master/1_word_count). 
 
 ## Further Reading and Other Resources 
 The following suggestions were taken from the following sources;
