@@ -1,6 +1,10 @@
 # Word Count in Apache Flink (batch processing) using Java 
 In this tutorial we will implement a word counting program (batch processing) on Apache Flink using Java. Make sure that any prerequisites are installed on your machine. For this tutorial [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) was used to write Java code. We recommend using  [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) or [Eclipse](https://www.eclipse.org/downloads/packages/installer) as an IDE. In this tutorial it is assumed that you have some knowledge in Java or any other [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) language. 
 
+Main resources used in this tutorial;
+* [WordCount.java](https://github.com/achmand/flink-java-tutorials/blob/master/1_word_count/src/main/java/tutorial/WordCount.java)
+* [pom.xml](https://github.com/achmand/flink-java-tutorials/blob/master/1_word_count/pom.xml)
+
 ### Step 1: Setting up a new Maven project. 
 In your IDE create a new Maven Project. Once the project is created, create a new package in `src/main/java` and name it `tutorial`. Inside the newly created package, create a new class and name it `WordCount`. 
 
