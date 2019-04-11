@@ -3,6 +3,15 @@
 In the following tutorials we will be looking on how to use Apache Flink with python. 
 Learn more about Flink at http://flink.apache.org/
 
+## Ecosystem Components
+In the following section we will look at different components which makes part of the Apache Flink ecosystem. 
+
+![Flink Ecosystem](https://raw.githubusercontent.com/achmand/ics5114_assignment/master/tutorials/images/flink_ecosystem.png)
+
+The above image and the following explanation is taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
+
+TODO -> Explain the ecosystem
+
 ## Building Apache Flink
 Parts of this section is taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
 
@@ -102,6 +111,3 @@ To build unit tests with Java 8, use Java 8u51 or above to prevent failures in u
 The following suggestions were taken from the following sources;
 TODO -> Write this section 
 https://www.quora.com/How-do-I-learn-Apache-Flink
-
-
-
