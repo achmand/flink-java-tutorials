@@ -1,17 +1,19 @@
-# Getting started with Apache Flink using Python 
+# Getting started with Apache Flink using Java 
 
-In the following tutorials we will be looking on how to use Apache Flink with python. 
+In the following tutorials we will be looking on how to use Apache Flink with Java. 
 Learn more about Flink at http://flink.apache.org/
 
 ## Ecosystem Components
-In the following section we will look at different components which make up the Apache Flink ecosystem. The image below and the following explanation on different components was taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
+In the following section we will look at different components which makes part of the Apache Flink ecosystem. 
 
 ![Flink Ecosystem](https://raw.githubusercontent.com/achmand/ics5114_assignment/master/tutorials/images/flink_ecosystem.png)
+
+The above image and the following explanation is taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
 
 TODO -> Explain the ecosystem
 
 ## Building Apache Flink
-Parts of this section was taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
+Parts of this section is taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
 
 ### Prerequisites for building Apache Flink:
 * Unix-like environment (we use Linux, Mac OS X, Cygwin)
@@ -102,10 +104,14 @@ Flink is now installed in `build-target`
 *NOTE: Maven 3.3.x can build Flink, but will not properly shade away certain dependencies. Maven 3.0.3 creates the libraries properly.
 To build unit tests with Java 8, use Java 8u51 or above to prevent failures in unit tests that use the PowerMock runner.*
 
-## Learning Apache Flink with Python
+## Learning Apache Flink with Java
+We suggest to follow the tutorials in order, since some steps required in one tutorial may be found in a previous tutorial. 
 
+* [Tutorial #1: Word Count](). 
 
 ## Further Reading and Other Resources 
 The following suggestions were taken from the following sources;
 TODO -> Write this section 
 https://www.quora.com/How-do-I-learn-Apache-Flink
+
+
