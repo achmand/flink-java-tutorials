@@ -4,16 +4,15 @@ In the following tutorials we will be looking on how to use Apache Flink with Ja
 Learn more about Flink at http://flink.apache.org/
 
 ## Ecosystem Components
-In the following section we will look at different components which makes part of the Apache Flink ecosystem. 
+In the following section we will look at different components which makes part of the Apache Flink ecosystem. The above image and the following explanation was taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
 
 ![Flink Ecosystem](https://raw.githubusercontent.com/achmand/flink-java-tutorials/master/images/flink_ecosystem.png)
 
-The above image and the following explanation is taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
 
 TODO -> Explain the ecosystem
 
 ## Building Apache Flink
-Parts of this section is taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
+Parts of this section was taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
 
 ### Prerequisites for building Apache Flink:
 * Unix-like environment (we use Linux, Mac OS X, Cygwin)
