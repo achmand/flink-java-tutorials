@@ -110,7 +110,7 @@ public static class Tokenizer implements FlatMapFunction<String, Tuple2<String, 
     }
 }
 ```
-Now we call the `map` operation and pass an instance of the newly created `Tokenizer` class as an argument. Then we need to group by the word and sum up by the value which is shown in the following code. 
+Now we call the `map` operation and pass an instance of the newly created `Tokenizer` class as an argument. Then we need to group by the word and sum up by the value which, is shown in the following code. 
 
 ```
 // tokenize the lines from textLines to (word, 1), groups and then counts
