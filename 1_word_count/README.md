@@ -144,7 +144,7 @@ To build the JAR using IntelliJ follow these steps;
 
 Once the JAR is built, we need a `txt` file to read as an input. A file located in this repository called `pride_and_prejudice.txt` will be used as an input. This file can be downloaded from [Project Gutenberg](https://www.gutenberg.org/ebooks/1342). 
 
-Now open a terminal and execute the following commands to run the JAR file on Apache Flink. First start a new cluster by typing the following in the terminal `flink/build-target/bin/start-cluster.sh`. After open a browser and go to `http://localhost:8081/` to make sure it's running. 
+Now open a terminal and execute the following commands to run the JAR file on Apache Flink. First start a new cluster by typing the following command in the terminal `flink/build-target/bin/start-cluster.sh`. After doing so open a browser and go to `http://localhost:8081/` to make sure that the cluster is running. 
 
 *NOTE: Make sure the paths match your locations on your machine.*
 
