@@ -1,72 +1,115 @@
-# Word Count in Apache Flink (batch processing) using Java 
-In this tutorial we will implement a word counting program on Apache Flink using Java. Make sure that any prerequisites are installed on your machine. For this tutorial [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) was used to write Java code. We recommend using  [IntelliJ IDEA](https://www.jetbrains.com/help/idea/installation-guide.html?section=Windows) or [Eclipse](https://www.eclipse.org/downloads/packages/installer) as an IDE. In this tutorial it is assumed that you have some knowledge in Java or any other [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) language. 
+# Getting started with Apache Flink using Java 
 
-### Step 1: Setting up a new Maven project. 
-In your IDE create a new Maven Project. Once the project is created, create a new package in `src/main/java` and name it `tutorial`. Inside the newly created package, create a new class and name it `WordCount`. 
+In the following tutorials we will be looking on how to use Apache Flink with Java. 
+Learn more about Flink at http://flink.apache.org/
 
-### Step 2: Setting up dependencies. 
-Now we need to add some dependencies which will be needed to write our word count logic. We will need the following dependencies: 
-* flink-java 
-* flink-streaming 
-* flink-clients 
+## Ecosystem Components
+In the following section we will look at different components which makes part of the Apache Flink ecosystem. The below image and the following explanation was taken from this [source](https://data-flair.training/blogs/flink-tutorial/), big thanks to the [Dataflair Team](https://data-flair.training/blogs/author/dfteam2/). 
 
-Open the `pom.xml` and include the following dependencies.
+![Flink Ecosystem](https://raw.githubusercontent.com/achmand/flink-java-tutorials/master/images/flink_ecosystem.png)
+
+
+TODO -> Explain the ecosystem
+
+## Building Apache Flink
+Parts of this section was taken from Apache Flink GitHub [page](https://github.com/apache/flink) from the "Building Apache Flink from Source" section. As from this date the current stable version of Apache Flink is 1.8.0, so the following tutorials will be based on this version. 
+
+### Prerequisites for building Apache Flink:
+* Unix-like environment (we use Linux, Mac OS X, Cygwin)
+* git
+* Maven (we recommend version 3.2.5)
+* Java 8 (Java 9 and 10 are not yet supported)
+
+#### 1. Installing a Unix-like environment 
+We are currently using Ubuntu 18.04.1 LTS. I suggest installing [Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0) or [Debian](https://www.debian.org/releases/stretch/installmanual) if you want to use a Linux distro. If you are using Windows you can set up a [Virtual Machine](https://www.virtualbox.org/) and install one of the suggested Linux distros. Any one using Mac OS X is good to go, since it is a Unix-like environment.
+
+#### 2. Installing Git  
+##### Debian-based Linux distros (inc Ubuntu)
 ```
-<dependencies>
-    <dependency>
-        <groupId>org.apache.flink</groupId>
-        <artifactId>flink-java</artifactId>
-        <version>1.8.0</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.flink</groupId>
-        <artifactId>flink-streaming-java_2.12</artifactId>
-        <version>1.8.0</version>
-        <scope>provided</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.flink</groupId>
-        <artifactId>flink-clients_2.12</artifactId>
-        <version>1.8.0</version>
-    </dependency>
-</dependencies>
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
 ```
-Once you added these dependencies, clean Maven project and install. The image below shows how to clean and install a Maven project when using IntelliJ, if you are using Eclipse just right click on the `pom.xml` go to 'Run As' and click on 'Maven clean' and then 'Maven install'. This will download and install the dependencies which were included.
-
-![IntelliJ Maven](https://raw.githubusercontent.com/achmand/flink-java-tutorials/master/images/flink_ecosystem.png)
-
-*NOTE: You can Enable Auto-Import, to automatically download and install any dependencies included in the `pom.xml` file.*
-
-### Step 3: Implementing the WordCount class. 
-Open the `WordCount` class and import the following packages.
+##### Mac OS X
+* Step 1: Install [Homebrew](https://brew.sh/) package manager. 
 ```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew doctor
+```
+* Step 2: Install [Git](https://git-scm.com/). 
+```
+brew install git
+```
+#### 3. Installing Java 8 (Java 9 and 10 are not yet supported)
+##### Debian-based Linux distros (inc Ubuntu)
+```
+sudo add-apt-repository ppa:webupd8team/java # when prompted press ENTER
+sudo apt update
+sudo apt install oracle-java8-installer
+```
+##### Mac OS X
+To install Java 8 on Mac OS X, follow this [tutorial](https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html).
+
+#### 3. Installing Maven (recommend version 3.2.5)
+The following steps were taken from this [source](https://www.javahelps.com/2017/10/install-apache-maven-on-linux.html), big thanks to [Gobinath Loganathan](https://www.blogger.com/profile/13489835818968107322). 
+
+* Step 1: Download the recommended version 'apache-maven-3.2.5-bin.tar.gz' from this [source](https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/).
+* Step 2: Move to the /opt directory.
+```
+cd /opt
+```
+* Step 3: Extract the maven archive into the opt directory.
+```
+sudo tar -xvzf ~/Downloads/apache-maven-3.2.5-bin.tar.gz
+```
+* Step 4: Edit the /etc/environment file.
+```
+# open nano and edit environment variables
+sudo nano /etc/environment 
+
+ # add the following environment variable
+M2_HOME="/opt/apache-maven-3.6.0"
+
+# append the bin directory to the PATH variable
+/opt/apache-maven-3.6.0/bin
+
+# so the result should be something similar to the below
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/apache-maven-3.2.5/bin"
+M2_HOME="/opt/apache-maven-3.2.5"
+
+# once you added the environment variable and appended the PATH 
+# press "ctrl + o" to save changes and "ctrl + x" to close nano. 
+```
+* Step 5: Update the mvn command.
+```
+sudo update-alternatives --install "/usr/bin/mvn" "mvn" "/opt/apache-maven-3.2.5/bin/mvn" 0
+sudo update-alternatives --set mvn /opt/apache-maven-3.2.5/bin/mvn
+```
+* Step 6: Check version to confirm installation.
+```
+mvn --version
 ```
 
-After importing the packages write the `main(String[] args)` function. This is the entry point for our Java program. 
+### Building from Source
+Once all the prerequisites are installed execute the following commands to build from source.  
 ```
-public static void main(String[] args) throws Exception{}
-```
-Inside the `main(String[] args)` function include the following lines of code. The comments inside this code explains the use of each line of code. If the explanation in the comments are not enough to understand the following code, we suggest to read through the following sources.
-* [ExecutionEnvironment](https://ci.apache.org/projects/flink/flink-docs-master/api/java/org/apache/flink/api/java/ExecutionEnvironment.html)
-* [ParameterTool](https://ci.apache.org/projects/flink/flink-docs-master/api/java/org/apache/flink/api/java/utils/ParameterTool.html)
-* [setGlobalJobParameters](https://ci.apache.org/projects/flink/flink-docs-master/api/java/org/apache/flink/api/common/ExecutionConfig.html#setGlobalJobParameters-org.apache.flink.api.common.ExecutionConfig.GlobalJobParameters-)
-
-In summary this code will; get the execution environment depending if you are running it remotely or locally, reads/parses the arguments passed and registers these parameters as global job parameters to be available to each node in the cluster. 
-```
-// returns the execution environment (the context 'Local or Remote' in which a program is executed)
-// LocalEnvironment will cause execution in the current JVM
-// RemoteEnvironment will cause execution on a remote setup
-final ExecutionEnvironment environment = ExecutionEnvironment.getExecutionEnvironment();
-
-// provides utility methods for reading and parsing the program arguments
-// in this tutorial we will have to provide the input file and the output file as arguments
-final ParameterTool parameters = ParameterTool.fromArgs(args);
-
-// register parameters globally so it can be available for each node in the cluster
-environment.getConfig().setGlobalJobParameters(parameters);
+git clone https://github.com/apache/flink.git
+cd flink
+mvn clean package -DskipTests # this will take up to 10 minutes
 ```
 
+Flink is now installed in `build-target`
 
+*NOTE: Maven 3.3.x can build Flink, but will not properly shade away certain dependencies. Maven 3.0.3 creates the libraries properly.
+To build unit tests with Java 8, use Java 8u51 or above to prevent failures in unit tests that use the PowerMock runner.*
 
+## Learning Apache Flink with Java
+We suggest to follow the tutorials in order, since some steps required in one tutorial may be found in a previous tutorial. 
 
+* [Tutorial #1: Word Count](https://github.com/achmand/flink-java-tutorials/tree/master/1_word_count). 
+
+## Further Reading and Other Resources 
+The following suggestions were taken from the following sources;
+TODO -> Write this section 
+https://www.quora.com/How-do-I-learn-Apache-Flink
 
