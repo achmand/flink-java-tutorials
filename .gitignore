@@ -3,7 +3,7 @@
 
 .idea
 target
-*/META-INF/*
+META-INF
 
 # User-specific stuff
 .idea/**/workspace.xml
