@@ -15,14 +15,14 @@ Parts of this section is taken from Apache Flink GitHub [page](https://github.co
 #### 1. Installing a Unix-like environment 
 We are currently using Ubuntu 18.04.1 LTS. I suggest installing [Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop#0) or [Debian](https://www.debian.org/releases/stretch/installmanual) if you want to use a Linux distro. If you are using Windows you can set up a [Virtual Machine](https://www.virtualbox.org/) and install one of the suggested Linux distros. Any one using Mac OS X is good to go, since it is a Unix-like environment.
 
-### 2. Installing Git  
-#### Debian-based Linux distros (inc Ubuntu)
+#### 2. Installing Git  
+##### Debian-based Linux distros (inc Ubuntu)
 ```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git
 ```
-#### Mac OS X
+##### Mac OS X
 * Step 1: Install [Homebrew](https://brew.sh/) package manager. 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,17 +32,17 @@ brew doctor
 ```
 brew install git
 ```
-### 3. Installing Java 8 (Java 9 and 10 are not yet supported)
-#### Debian-based Linux distros (inc Ubuntu)
+#### 3. Installing Java 8 (Java 9 and 10 are not yet supported)
+##### Debian-based Linux distros (inc Ubuntu)
 ```
 sudo add-apt-repository ppa:webupd8team/java # when prompted press ENTER
 sudo apt update
 sudo apt install oracle-java8-installer
 ```
-#### Mac OS X
+##### Mac OS X
 To install Java 8 on Mac OS X, follow this [tutorial](https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html).
 
-### 3. Installing Maven (recommend version 3.2.5)
+#### 3. Installing Maven (recommend version 3.2.5)
 The following steps were taken from this [source](https://www.javahelps.com/2017/10/install-apache-maven-on-linux.html), big thanks to [Gobinath Loganathan](https://www.blogger.com/profile/13489835818968107322). 
 
 * Step 1: Download the recommended version 'apache-maven-3.2.5-bin.tar.gz' from this [source](https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/).
