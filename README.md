@@ -68,10 +68,10 @@ sudo tar -xvzf ~/Downloads/apache-maven-3.2.5-bin.tar.gz
 sudo nano /etc/environment 
 
  # add the following environment variable
-M2_HOME="/opt/apache-maven-3.6.0"
+M2_HOME="/opt/apache-maven-3.2.5"
 
 # append the bin directory to the PATH variable
-/opt/apache-maven-3.6.0/bin
+/opt/apache-maven-3.2.5/bin
 
 # so the result should be something similar to the below
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/apache-maven-3.2.5/bin"
