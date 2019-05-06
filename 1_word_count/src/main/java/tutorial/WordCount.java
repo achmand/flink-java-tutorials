@@ -1,6 +1,7 @@
 package tutorial;
 
 // importing packages
+
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
@@ -13,7 +14,7 @@ Implementing WordCount on Apache Flink using batch processing
 */
 public class WordCount {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         // returns the execution environment (the context 'Local or Remote' in which a program is executed)
         // LocalEnvironment will cause execution in the current JVM
@@ -42,7 +43,7 @@ public class WordCount {
 
         // output the final result
         // check that the argument 'output' was passed to save in that path
-        if(parameters.has("output")){
+        if (parameters.has("output")) {
             // write result as CSV row delimiter is a line break, field delimiter is a space
             result.writeAsCsv(parameters.get("output"), "\n", " ");
 

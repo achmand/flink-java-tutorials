@@ -148,7 +148,7 @@ Now open a terminal and execute the following commands to run the JAR file on Ap
 
 *NOTE: Make sure the paths match your locations on your machine.*
 
-Once the cluster is running on the machine execute the JAR file by executing the following (replace with your paths) `FLINKPATH RUN -c MAINCLASS JARPATH --input INPUTPATH --output OUTPUTPATH`. 
+Once the cluster is running on the machine execute the JAR file by executing the following (replace with your paths) `FLINKPATH run -c MAINCLASS JARPATH --input INPUTPATH --output OUTPUTPATH`. 
 
 On our machine this command was as follows:
 `flink/build-target/bin/flink run -c tutorial.WordCount flink-java-tutorials/1_word_count/out/artifacts/1_word_count_jar/1_word_count.jar --input flink-java-tutorials/1_word_count/pride_and_prejudice.txt --output flink-java-tutorials/1_word_count/ouput`.
